@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavbarTop from "./components/navbar-top/NavbarTop";
 import NavbarMid from "./components/navbar-mid/NavbarMid";
+import { ToastContainer } from "react-toastify";
+import Image from "next/image";
+import daBG from "./assets/image.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-purple-950`}>
+      <body className={`${inter.className} bg-purple-950 relative`}>
+        <ToastContainer />
+        <Image
+          src={daBG}
+          alt="batangas.net"
+          className="absolute top-0 right-0 z-0 h-auto w-[760px]"
+        />
         <NavbarTop />
         <NavbarMid />
         {children}

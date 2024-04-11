@@ -17,18 +17,26 @@ export default function Home() {
           more pricey in March
         </h1>
         <Link
-          className="font-bold px-9 py-3 text-2xl text-white font-serif bg-blue-700 rounded-full"
+          className="font-bold px-9 py-3 text-xl text-white font-serif bg-blue-700 rounded-full"
           href={""}
         >
           Read
         </Link>
       </div>
-      <div className="mx-40 mt-32 flex flex-wrap gap-y-24 gap-x-10 mb-10 justify-center">
+      <div className="mx-24 mt-32 flex flex-wrap gap-y-24 gap-x-10 mb-20 justify-center">
         {Array(8)
           .fill(0)
           .map((_, index) => (
             <NewsCard {...news[0]} key={index} />
           ))}
+      </div>
+      <div className="flex justify-end">
+        <Link
+          href={""}
+          className="py-3 bg-blue-700 px-8 text-white font-semibold rounded-full mr-48"
+        >
+          More news
+        </Link>
       </div>
     </main>
   );
