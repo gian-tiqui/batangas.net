@@ -1,7 +1,8 @@
+import { SubmenuInterface } from "@/app/utils/Menu";
 import React from "react";
 
-const Submenu = () => {
-  return <div></div>;
+const Submenu: React.FC<SubmenuInterface> = ({ name, path }) => {
+  return <div>{name}</div>;
 };
 
 export default Submenu;
