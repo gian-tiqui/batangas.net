@@ -1,4 +1,4 @@
-interface SubmenuInterface {
+export interface SubmenuInterface {
   name: string;
   path: string;
 }

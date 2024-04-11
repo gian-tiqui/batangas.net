@@ -1,6 +1,7 @@
 "use client";
 import { MenuInterface } from "@/app/utils/Menu";
 import React, { useState } from "react";
+import Submenu from "./Submenu";
 
 const Menu: React.FC<MenuInterface> = ({ name, submenu }) => {
   const [submenuVisible, setSubmenuVisible] = useState<boolean>(false);
@@ -10,14 +11,10 @@ const Menu: React.FC<MenuInterface> = ({ name, submenu }) => {
   };
 
   return (
-    <div
-      className="relative hover:cursor-pointer"
-      onMouseEnter={handleMenuClicked}
-      onMouseLeave={handleMenuClicked}
-    >
+    <div className="hover:cursor-pointer flex flex-col">
       <div className="flex">{name}</div>
-
-      {!submenuVisible && <div>{JSON.stringify(submenu, null, 2)}</div>}
+      {/* {!submenuVisible &&
+        submenu.map((item, index) => <Submenu {...item} key={index} />)} */}
     </div>
   );
 };
