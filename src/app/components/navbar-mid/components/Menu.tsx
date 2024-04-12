@@ -1,7 +1,7 @@
 "use client";
 import { MenuInterface } from "@/app/utils/Menu";
 import React, { useState } from "react";
-import Submenu from "./Submenu"; // Assuming Submenu component handles submenu content
+import Submenu from "./Submenu";
 import { BiChevronDown } from "react-icons/bi";
 
 const Menu: React.FC<MenuInterface> = ({ name, submenu }) => {
