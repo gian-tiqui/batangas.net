@@ -18,12 +18,14 @@ export default function Home() {
         {Array(8)
           .fill(0)
           .map((_, index) => (
-            <NewsCard {...news[0]} key={index} />
+            <Link href={`/news/${0}`} key={index}>
+              <NewsCard {...news[0]} />
+            </Link>
           ))}
       </div>
       <div className="flex justify-end mb-20">
         <Link
-          href={""}
+          href={"/news"}
           className="py-3 bg-blue-700 px-8 text-white font-semibold rounded-full mr-48"
         >
           More news

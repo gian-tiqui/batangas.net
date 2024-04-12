@@ -7,19 +7,8 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const NewsCard: React.FC<NewsInterface> = ({ title, urlToImage }) => {
-  const handleNewsCardClicked = () => {
-    toast("wat", {
-      type: "success",
-      autoClose: 3000,
-      position: "top-center",
-    });
-  };
-
   return (
-    <div
-      className="w-64 text-white hover:cursor-pointer"
-      onClick={handleNewsCardClicked}
-    >
+    <div className="w-64 text-white hover:cursor-pointer">
       <Image
         src={urlToImage}
         width={10000}
