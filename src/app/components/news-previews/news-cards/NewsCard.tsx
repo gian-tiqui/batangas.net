@@ -2,22 +2,44 @@
 
 import { NewsInterface } from "@/app/utils/News";
 import Image from "next/image";
-import React from "react";
-import { toast } from "react-toastify";
+import React, { useState } from "react";
+import { BsNewspaper } from "react-icons/bs";
 import "react-toastify/dist/ReactToastify.css";
 
 const NewsCard: React.FC<NewsInterface> = ({ title, urlToImage }) => {
-  return (
-    <div className="w-64 text-white hover:cursor-pointer">
-      <Image
-        src={urlToImage}
-        width={10000}
-        height={10000}
-        alt={title}
-        className="w-72 h-36 mb-4"
-      />
+  const [iconVisible, setIconVisible] = useState<boolean>(false);
 
-      <h1 className="text-white text-md">{title}</h1>
+  const handleHover = () => {
+    setIconVisible(true);
+  };
+
+  const handleUnhover = () => {
+    setIconVisible(false);
+  };
+
+  return (
+    <div
+      className="group relative w-64 text-white hover:cursor-pointer"
+      onMouseEnter={handleHover}
+      onMouseLeave={handleUnhover}
+    >
+      <div className="group-hover:opacity-50 overflow-hidden">
+        <Image
+          src={urlToImage}
+          width={10000}
+          height={10000}
+          alt={title}
+          className="w-full h-36 object-cover"
+        />
+        {iconVisible && (
+          <BsNewspaper
+            className="h-10 w-auto absolute top-1/3 left-1/2 transform -translate-x-1/2 
+        -translate-y-1/2 text-white group-hover:text-opacity-100 group-hover:scale-110"
+          />
+        )}
+      </div>
+
+      <h1 className="text-white text-md mt-4">{title}</h1>
     </div>
   );
 };
