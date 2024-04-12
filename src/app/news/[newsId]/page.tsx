@@ -11,7 +11,7 @@ const SelectedNews: React.FC<SelectedNewsProps> = ({ params }) => {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    const options = {
+    const options: Intl.DateTimeFormatOptions = {
       year: "numeric",
       month: "long",
       day: "numeric",
