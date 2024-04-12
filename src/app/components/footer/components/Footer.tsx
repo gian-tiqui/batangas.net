@@ -1,15 +1,23 @@
 import React from "react";
-import { BiCopyright, BiNews } from "react-icons/bi";
+import Image from "next/image";
+import { BiCopyright } from "react-icons/bi";
 import { FaFacebook } from "react-icons/fa";
+import batangasNetLogo from "../../../assets/favicon.ico";
 
 const items: number[] = [1, 2, 3, 4];
 
 const Footer = () => {
   return (
-    <footer className="h-[420px] bg-black">
+    <footer className="h-[420px] bg-purple-950">
       <div className="border-t border-t-white p-20 flex">
         <div className="max-w-96">
-          <BiNews className="text-white h-7 w-7 mb-7" />
+          <Image
+            src={batangasNetLogo}
+            alt="Batangas.net"
+            height={736}
+            width={1366}
+            className="h-8 w-auto mr-3 mb-4"
+          />
           <p className="text-white text-lg mb-7">
             dhkjaskjhdnabkjhscd iadhacdsh jdhakdshaj adshhasdhkjdshkj
           </p>
@@ -54,10 +62,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <hr className="border-t border-t-gray-800 mx-20" />
+      <hr className="border-t border-t-white mx-20" />
       <div className="flex mt-8 ml-20 items-center gap-1">
-        <BiCopyright className="text-gray-600" />
-        <p className="text-gray-600">Batangas.net, Inc. All rights reserved.</p>
+        <BiCopyright className="text-white" />
+        <p className="text-white">Batangas.net, Inc. All rights reserved.</p>
       </div>
     </footer>
   );

@@ -1,14 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
 import { news } from "./utils/News";
 import NewsCard from "./components/news-previews/news-cards/NewsCard";
 import LatestNews from "./components/latest-news/LatestNews";
-import Footer from "./components/footer/components/Footer";
 import ImageHeader from "./components/image-header/ImageHeader";
 
 export default function Home() {
   return (
-    <main className="pt-80 font-serif">
+    <main className="pt-40 font-serif">
       <ImageHeader />
       <div className="mx-64">
         <h1 className="text-blue-700 text-6xl font-bold font-serif mb-5">
@@ -31,7 +29,6 @@ export default function Home() {
           More news
         </Link>
       </div>
-      <Footer />
     </main>
   );
 }

@@ -28,7 +28,7 @@ const NewsCard: React.FC<NewsInterface> = ({ title, urlToImage }) => {
         className="w-72 h-36 mb-4"
       />
 
-      <h1 className="text-white text-sm">{title}</h1>
+      <h1 className="text-white text-md">{title}</h1>
     </div>
   );
 };
