@@ -10,7 +10,7 @@ const Li: React.FC<LiProps> = ({ name, path }) => {
   return (
     <Link
       href={path}
-      className="border-e border-white pr-10 hover:animate-pulse"
+      className="border-e border-white pr-10 hover:text-gray-400 font-serif"
     >
       {name}
     </Link>
