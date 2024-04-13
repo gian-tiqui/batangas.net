@@ -10,9 +10,9 @@ const items: number[] = [1, 2, 3, 4];
 
 const Footer = () => {
   return (
-    <footer className="hidden md:block h-[420px] bg-purple-950">
-      <div className="border-t border-t-white p-20 flex">
-        <div className="max-w-96">
+    <footer className="md:h-[420px] bg-purple-950 pb-5 md:pb-0">
+      <div className="border-t border-t-white p-3 md:p-20 flex flex-col md:flex-row">
+        <div className="px-3 mt-3">
           <Image
             src={batangasNetLogo}
             alt="Batangas.net"
@@ -23,7 +23,7 @@ const Footer = () => {
           <p className="text-white text-lg mb-7 font-serif">
             dhkjaskjhdnabkjhscd iadhacdsh jdhakdshaj adshhasdhkjdshkj
           </p>
-          <div className="flex justify-start gap-5">
+          <div className="flex justify-start gap-5 mb-7">
             <Link href={"https://www.facebook.com/Batangasnewsportal"}>
               <FaFacebook className="text-white h-6 w-6" />
             </Link>
@@ -38,7 +38,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="flex justify-evenly text-white w-full">
+        <div className="flex justify-evenly text-white w-full mb-6 md:mb-0">
           <div className="flex flex-col gap-y-2">
             <p className="font-bold font-serif">Entertainment</p>
             {items.map((val) => (
@@ -73,8 +73,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <hr className="border-t border-t-white mx-20" />
-      <div className="flex mt-8 ml-20 items-center gap-1">
+      <hr className="border-t border-t-white mx-4 md:mx-20" />
+      <div className="flex mt-8 ml-10 md:ml-20 items-center gap-1">
         <BiCopyright className="text-white" />
         <p className="text-white font-serif">
           Batangas.net, Inc. All rights reserved.
