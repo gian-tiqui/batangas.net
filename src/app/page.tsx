@@ -6,7 +6,7 @@ import ImageHeader from "./components/image-header/ImageHeader";
 
 export default function Home() {
   return (
-    <main className="pt-40 font-serif">
+    <main className="pt-40">
       <ImageHeader />
       <div className="mx-64">
         <h1 className="text-blue-700 text-6xl font-bold font-serif mb-5">
@@ -26,7 +26,7 @@ export default function Home() {
       <div className="flex justify-end mb-20">
         <Link
           href={"/news"}
-          className="py-3 bg-blue-700 px-8 text-white font-semibold rounded-full mr-48"
+          className="py-3 bg-blue-700 px-8 text-white font-semibold rounded-full mr-48 hover:bg-blue-800 hover:text-gray-300 font-serif"
         >
           More news
         </Link>

@@ -4,7 +4,6 @@ import { NewsInterface } from "@/app/utils/News";
 import Image from "next/image";
 import React, { useState } from "react";
 import { BsNewspaper } from "react-icons/bs";
-import "react-toastify/dist/ReactToastify.css";
 
 const NewsCard: React.FC<NewsInterface> = ({ title, urlToImage }) => {
   const [iconVisible, setIconVisible] = useState<boolean>(false);
@@ -39,7 +38,7 @@ const NewsCard: React.FC<NewsInterface> = ({ title, urlToImage }) => {
         )}
       </div>
 
-      <h1 className="text-white text-md mt-4">{title}</h1>
+      <h1 className="text-white text-md mt-4 font-serif">{title}</h1>
     </div>
   );
 };

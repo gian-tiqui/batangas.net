@@ -10,7 +10,7 @@ const LatestNews = () => {
       </h1>
 
       <Link
-        className="font-bold px-9 py-3 text-xl text-white font-serif bg-blue-700 rounded-full"
+        className="font-bold px-9 py-3 text-xl text-white font-serif bg-blue-700 rounded-full hover:bg-blue-800 hover:text-gray-300"
         href={`/news/${news.length - 1}`}
       >
         Read

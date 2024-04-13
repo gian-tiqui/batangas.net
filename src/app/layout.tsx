@@ -23,7 +23,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-black relative pt-60`}>
-        <ToastContainer />
         <div className="navigation-container absolute top-0 left-0 right-0 z-10">
           <NavbarTop />
           <NavbarMid />
