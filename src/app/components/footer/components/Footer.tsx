@@ -10,7 +10,7 @@ const items: number[] = [1, 2, 3, 4];
 
 const Footer = () => {
   return (
-    <footer className="h-[420px] bg-purple-950">
+    <footer className="hidden md:block h-[420px] bg-purple-950">
       <div className="border-t border-t-white p-20 flex">
         <div className="max-w-96">
           <Image

@@ -12,7 +12,7 @@ const NavbarMid = () => {
   const [selectedNav, setSelectedNav] = useState<string>("");
 
   return (
-    <nav className="px-40 mt-12">
+    <nav className="hidden md:block md:px-40 md:mt-12">
       <div className="flex text-white">
         <Image
           src={batangasNetLogo}
