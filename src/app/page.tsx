@@ -6,10 +6,10 @@ import ImageHeader from "./components/image-header/ImageHeader";
 
 export default function Home() {
   return (
-    <main className="pt-40">
+    <main className="pt-10 md:pt-40">
       <ImageHeader />
-      <div className="mx-64">
-        <h1 className="text-blue-700 text-6xl font-bold font-serif mb-5">
+      <div className="mx-9 md:mx-64">
+        <h1 className="text-blue-700 text-3xl md:text-6xl font-bold font-serif mb-5">
           Latest News
         </h1>
         <LatestNews />
@@ -23,10 +23,10 @@ export default function Home() {
             </Link>
           ))}
       </div>
-      <div className="flex justify-end mb-20">
+      <div className="flex justify-center md:justify-end mb-20">
         <Link
           href={"/news"}
-          className="py-3 bg-blue-700 px-8 text-white font-semibold rounded-full mr-48 hover:bg-blue-800 hover:text-gray-300 font-serif"
+          className="py-3 bg-blue-700 px-8 text-white font-semibold rounded-full md:mr-48 hover:bg-blue-800 hover:text-gray-300 font-serif"
         >
           More news
         </Link>

@@ -21,8 +21,8 @@ const SelectedNews: React.FC<SelectedNewsProps> = ({ params }) => {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 justify-center mb-20 px-32">
-      <div className="text-white px-3 mx-auto font-serif md:col-span-2 ">
+    <div className="grid grid-cols-1 md:grid-cols-3 justify-center mb-20 md:px-32">
+      <div className="text-white px-3 mx-auto font-serif md:col-span-2">
         <h1 className="text-4xl font-bold mb-7">{selectedNews.title}</h1>
         <Image
           alt={selectedNews.title}
