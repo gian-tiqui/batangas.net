@@ -12,25 +12,10 @@ export const menu: MenuInterface[] = [
   {
     name: "News",
     submenu: [
-      { name: "first", path: "/first" },
-      { name: "second", path: "/second" },
-      { name: "third", path: "/third" },
-    ],
-  },
-  {
-    name: "Shows",
-    submenu: [
-      { name: "first", path: "/first" },
-      { name: "second", path: "/second" },
-      { name: "third", path: "/third" },
-    ],
-  },
-  {
-    name: "Live",
-    submenu: [
-      { name: "first", path: "/first" },
-      { name: "second", path: "/second" },
-      { name: "third", path: "/third" },
+      { name: "Entertainment", path: "/entertainment" },
+      { name: "Politics", path: "/politics" },
+      { name: "Lifestyle", path: "/lifestyle" },
+      { name: "Sports", path: "/sports" },
     ],
   },
 ];

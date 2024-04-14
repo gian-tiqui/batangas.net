@@ -18,7 +18,7 @@ const NewsCard: React.FC<NewsInterface> = ({ title, urlToImage }) => {
 
   return (
     <div
-      className="group relative w-64 text-white hover:cursor-pointer"
+      className="group relative w-64 text-white hover:cursor-pointer shadow-xl dark:shadow-none pb-4"
       onMouseEnter={handleHover}
       onMouseLeave={handleUnhover}
     >
@@ -38,7 +38,9 @@ const NewsCard: React.FC<NewsInterface> = ({ title, urlToImage }) => {
         )}
       </div>
 
-      <h1 className="text-white text-md mt-4 font-serif">{title}</h1>
+      <h1 className="text-black dark:text-white text-md mt-4 font-serif mx-2">
+        {title}
+      </h1>
     </div>
   );
 };

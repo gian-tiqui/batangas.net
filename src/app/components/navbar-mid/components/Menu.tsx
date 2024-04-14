@@ -21,15 +21,22 @@ const Menu: React.FC<MenuInterface> = ({ name, submenu }) => {
       >
         <p className="font-serif">{name}</p>
         <BiChevronDown
-          className={`text-white transition duration-200 transform ${
+          className={`transition duration-200 transform ${
             isOpen ? "rotate-180" : "rotate-0"
           }`}
         />
       </button>
-      <div className="flex flex-col gap-2 mt-2">
+      <div className="flex flex-col gap-2 mt-9 absolute">
         {isOpen &&
           submenu.map((item, index) => <Submenu key={index} {...item} />)}
       </div>
+
+      {isOpen && (
+        <div
+          className="h-full w-screen fixed top-0 left-0 right-0 bottom-0"
+          onClick={handleMenuClick}
+        ></div>
+      )}
     </div>
   );
 };
