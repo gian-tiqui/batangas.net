@@ -1,8 +1,9 @@
 "use client";
 
 import { NewsInterface } from "@/app/utils/News";
+import axios from "axios";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BsNewspaper } from "react-icons/bs";
 
 const NewsCard: React.FC<NewsInterface> = ({ title, urlToImage }) => {
@@ -24,7 +25,7 @@ const NewsCard: React.FC<NewsInterface> = ({ title, urlToImage }) => {
     >
       <div className="group-hover:opacity-50 overflow-hidden">
         <Image
-          src={urlToImage}
+          src={urlToImage ? urlToImage : ""}
           width={10000}
           height={10000}
           alt={title}

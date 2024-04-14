@@ -49,9 +49,9 @@ const MobileLi: React.FC<MobileLiProps> = ({ open, onOpen }) => {
       <div className="flex justify-end pr-4 flex-1 md:hidden pl-3">
         <div onClick={changeMode}>
           {darkMode ? (
-            <BiMoon className="h-6 w-auto" />
-          ) : (
             <BiSun className="h-6 w-auto" />
+          ) : (
+            <BiMoon className="h-6 w-auto" />
           )}
         </div>
       </div>

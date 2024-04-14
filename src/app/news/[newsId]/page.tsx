@@ -29,14 +29,15 @@ const SelectedNews: React.FC<SelectedNewsProps> = ({ params }) => {
           width={1000}
           height={1000}
           className="mb-7"
-          src={selectedNews.urlToImage}
+          src={selectedNews.urlToImage ? selectedNews.urlToImage : ""}
         />
         <p className="mb-10">{selectedNews.author}</p>
         <p className="text-xl mb-10">
-          Published on: {formatDate(selectedNews.publishedAt)}
+          Published on:{" "}
+          {formatDate(selectedNews.publishedAt ? selectedNews.publishedAt : "")}
         </p>
         <div>
-          {selectedNews.content.split("\n").map((paragraph, index) => (
+          {selectedNews.content?.split("\n").map((paragraph, index) => (
             <React.Fragment key={index}>
               <p className="text-xl">{paragraph}</p>
               {(index + 1) % 2 === 0 && <br />}{" "}

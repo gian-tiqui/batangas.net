@@ -1,23 +1,25 @@
 export interface NewsInterface {
-  source: {
-    id: null;
-    name: string;
-  };
-  author: string;
+  id: number;
+  sourceId?: number | null;
+  sourceName?: string | null;
+  author?: string | null;
   title: string;
-  description: string;
+  description?: string | null;
   url: string;
-  urlToImage: string;
-  publishedAt: string;
-  content: string;
+  urlToImage?: string | null;
+  publishedAt?: string | null;
+  content?: string | null;
+  createdAt: Date | null;
+  updatedAt: Date | null;
 }
 
 export const news: NewsInterface[] = [
   {
-    source: {
-      id: null,
-      name: "Motley Fool Australia",
-    },
+    id: 0,
+    sourceId: null,
+    sourceName: null,
+    createdAt: null,
+    updatedAt: null,
     author: "Mitchell Lawler",
     title: "Up 16% in 2024! Are ASX tech shares now overvalued?",
     description:
