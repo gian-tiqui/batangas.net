@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
-import React, { Dispatch, SetStateAction } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import Image from "next/image";
-import { BiExit, BiMenu } from "react-icons/bi";
+import { BiExit, BiMenu, BiMoon, BiSun } from "react-icons/bi";
 import batangasNetLogo from "../../../assets/favicon.ico";
 
 interface MobileLiProps {
@@ -11,6 +11,13 @@ interface MobileLiProps {
 }
 
 const MobileLi: React.FC<MobileLiProps> = ({ open, onOpen }) => {
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+
+  const changeMode = () => {
+    setDarkMode((prevMode) => !prevMode);
+    document.documentElement.classList.toggle("dark");
+  };
+
   const handlePress = () => {
     onOpen((prevVal) => !prevVal);
   };
@@ -39,7 +46,15 @@ const MobileLi: React.FC<MobileLiProps> = ({ open, onOpen }) => {
           BATANGAS.NET
         </Link>
       </div>
-      <div className="flex-1 md:hidden pl-3"></div>
+      <div className="flex justify-end pr-4 flex-1 md:hidden pl-3">
+        <div onClick={changeMode}>
+          {darkMode ? (
+            <BiMoon className="h-6 w-auto" />
+          ) : (
+            <BiSun className="h-6 w-auto" />
+          )}
+        </div>
+      </div>
     </>
   );
 };

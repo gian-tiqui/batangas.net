@@ -9,7 +9,7 @@ const ImageHeader = () => {
         alt="batangas.net"
         height={10000}
         width={10000}
-        className="h-auto w-[900px] md:rounded-es-full bg-blend-darken filter brightness-[40%]"
+        className="h-auto w-[900px] md:rounded-es-full bg-blend-darken filter dark:brightness-[40%]"
       />
     </div>
   );

@@ -1,7 +1,14 @@
-import React from "react";
+"use client";
+import { useEffect } from "react";
+import { news } from "../utils/News";
+import { redirect } from "next/navigation";
 
 const News = () => {
-  return <div className="text-white">helo</div>;
+  useEffect(() => {
+    redirect(`/news/${news.length - 1}`);
+  }, []);
+
+  return <></>;
 };
 
 export default News;
