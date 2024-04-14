@@ -4,7 +4,7 @@ import NewsCard from "./components/news-previews/news-cards/NewsCard";
 import LatestNews from "./components/latest-news/LatestNews";
 import ImageHeader from "./components/image-header/ImageHeader";
 
-export default function Home() {
+export const Home = () => {
   return (
     <main className="pt-10 md:pt-40">
       <ImageHeader />
@@ -33,4 +33,6 @@ export default function Home() {
       </div>
     </main>
   );
-}
+};
+
+export default Home;
