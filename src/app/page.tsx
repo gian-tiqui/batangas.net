@@ -1,10 +1,16 @@
 import Link from "next/link";
-import { news } from "./utils/News";
+import { NewsInterface, news } from "./utils/News";
 import NewsCard from "./components/news-previews/news-cards/NewsCard";
 import LatestNews from "./components/latest-news/LatestNews";
 import ImageHeader from "./components/image-header/ImageHeader";
+import axios from "axios";
+import { newsApiUri } from "./utils/Urls";
 
-export const Home = () => {
+export const Home = async () => {
+  const response = await axios.get(newsApiUri);
+
+  const newsData: NewsInterface[] = response.data;
+
   return (
     <main className="pt-10 md:pt-40">
       <ImageHeader />
@@ -15,13 +21,11 @@ export const Home = () => {
         <LatestNews />
       </div>
       <div className="mx-24 mt-32 flex flex-wrap gap-y-24 gap-x-10 mb-20 justify-center">
-        {Array(8)
-          .fill(0)
-          .map((_, index) => (
-            <Link href={`/news/${0}`} key={index}>
-              <NewsCard {...news[0]} />
-            </Link>
-          ))}
+        {newsData.map((item, index) => (
+          <Link href={`/news/${item.id}`} key={index}>
+            <NewsCard {...item} />
+          </Link>
+        ))}
       </div>
       <div className="flex justify-center md:justify-end mb-20">
         <Link

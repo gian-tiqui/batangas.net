@@ -6,7 +6,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { BsNewspaper } from "react-icons/bs";
 
-const NewsCard: React.FC<NewsInterface> = ({ title, urlToImage }) => {
+const NewsCard: React.FC<NewsInterface> = ({ title, urlToImage, author }) => {
   const [iconVisible, setIconVisible] = useState<boolean>(false);
 
   const handleHover = () => {
@@ -41,6 +41,9 @@ const NewsCard: React.FC<NewsInterface> = ({ title, urlToImage }) => {
 
       <h1 className="text-black dark:text-white text-md mt-4 font-serif mx-2">
         {title}
+      </h1>
+      <h1 className="text-black dark:text-white text-sm mt-4 font-serif mx-2">
+        Author: {author}
       </h1>
     </div>
   );
