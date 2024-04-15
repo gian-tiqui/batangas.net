@@ -1,12 +1,13 @@
-"use client";
 import { useEffect } from "react";
-import { news } from "../utils/News";
 import { redirect } from "next/navigation";
+import axios from "axios";
+import { NewsInterface } from "../utils/News";
+import { newsApiUri } from "../utils/Urls";
 
-const News = () => {
-  useEffect(() => {
-    redirect(`/news/${news.length - 1}`);
-  }, []);
+const News = async () => {
+  const response = await axios.get(newsApiUri);
+  const newsData: NewsInterface[] = response.data;
+  redirect(`/news/${newsData.length - 1}`);
 
   return <></>;
 };
