@@ -5,6 +5,10 @@ interface RouteInterface {
 
 export const navbarTopRoutes: RouteInterface[] = [
   {
+    name: "Home",
+    path: "/",
+  },
+  {
     name: "Entertainment",
     path: "/entertainment",
   },

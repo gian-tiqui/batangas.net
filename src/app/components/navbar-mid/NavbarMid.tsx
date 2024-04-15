@@ -39,9 +39,9 @@ const NavbarMid = () => {
 
           <div onClick={changeMode}>
             {darkMode ? (
-              <BiSun className="h-6 w-auto" />
+              <BiSun className="h-6 w-auto hover:text-gray-400" />
             ) : (
-              <BiMoon className="h-6 w-auto" />
+              <BiMoon className="h-6 w-auto hover:text-gray-400" />
             )}
           </div>
 
