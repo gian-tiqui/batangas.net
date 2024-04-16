@@ -4,7 +4,7 @@ import { BiSearchAlt } from "react-icons/bi";
 const SearchBar = () => {
   return (
     <div className="relative w-max mx-auto">
-      <div className="flex absolute inset-0 gap-2">
+      <div className="flex absolute inset-0 gap-2 hover:text-gray-500">
         <BiSearchAlt className="h-6 w-auto" />
       </div>
       <input

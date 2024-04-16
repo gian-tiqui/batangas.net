@@ -3,11 +3,11 @@ import { NewsInterface, news } from "./utils/News";
 import NewsCard from "./components/news-previews/news-cards/NewsCard";
 import LatestNews from "./components/latest-news/LatestNews";
 import ImageHeader from "./components/image-header/ImageHeader";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import { newsApiUri } from "./utils/Urls";
 
 export const Home = async () => {
-  const response = await axios.get(newsApiUri);
+  const response: AxiosResponse<NewsInterface[]> = await axios.get(newsApiUri);
 
   const newsData: NewsInterface[] = response.data;
 

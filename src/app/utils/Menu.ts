@@ -1,6 +1,7 @@
 export interface SubmenuInterface {
   name: string;
   path: string;
+  onClick?: () => void;
 }
 
 export interface MenuInterface {

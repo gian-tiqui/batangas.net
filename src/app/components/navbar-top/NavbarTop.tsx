@@ -8,6 +8,10 @@ import SearchBar from "../search/SearchBar";
 const NavbarTop = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
+  const onClose = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="md:px-40 bg-indigo-800 dark:bg-purple-950 py-2 text-white border-b border-b-white">
       <div className="flex md:gap-3">
@@ -29,7 +33,7 @@ const NavbarTop = () => {
             </div>
             <div className="flex flex-wrap px-4 mt-4 gap-y-5">
               {navbarTopRoutes.map((route, index) => (
-                <Li hidden={false} {...route} key={index} />
+                <Li hidden={false} {...route} key={index} onClose={onClose} />
               ))}
             </div>
           </div>
