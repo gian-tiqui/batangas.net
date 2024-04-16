@@ -8,7 +8,11 @@ const Menu: React.FC<MenuInterface> = ({ name, submenu }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleMenuClick = () => {
-    setIsOpen((prevVal) => !prevVal);
+    setIsOpen((prevIsOpen) => !prevIsOpen);
+  };
+
+  const handleSubmenuClick = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -28,15 +32,10 @@ const Menu: React.FC<MenuInterface> = ({ name, submenu }) => {
       </button>
       <div className="flex flex-col gap-2 mt-9 absolute">
         {isOpen &&
-          submenu.map((item, index) => <Submenu key={index} {...item} />)}
+          submenu.map((item, index) => (
+            <Submenu key={index} {...item} onClick={handleSubmenuClick} />
+          ))}
       </div>
-
-      {isOpen && (
-        <div
-          className="h-full w-screen fixed top-0 left-0 right-0 bottom-0"
-          onClick={handleMenuClick}
-        ></div>
-      )}
     </div>
   );
 };

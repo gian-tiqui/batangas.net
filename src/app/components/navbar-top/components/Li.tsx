@@ -5,11 +5,13 @@ interface LiProps {
   name: string;
   path: string;
   hidden: boolean;
+  onClose?: () => void;
 }
 
-const Li: React.FC<LiProps> = ({ name, path, hidden }) => {
+const Li: React.FC<LiProps> = ({ name, path, hidden, onClose }) => {
   return (
     <Link
+      onClick={onClose}
       href={path}
       className={`${
         hidden && "hidden"
